@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Finger Paint', cursive;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+
+}
+
+.container {
+    padding: 5rem 9rem;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result_images {
+    display: flex;
+    column-gap: 7rem;
+}
+
+.result_images img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.user_result img {
+    width: 100px;
+    border-radius: 50%;
+}
