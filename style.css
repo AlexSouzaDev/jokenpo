@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Finger Paint', cursive;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -12,12 +12,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
-
+    background: white;
 }
 
 .container {
-    padding: 5rem 9rem;
+    padding: 2rem 7rem;
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -25,15 +24,81 @@ body {
 
 .result_images {
     display: flex;
-    column-gap: 7rem;
+    column-gap: 17rem;
 }
 
-.result_images img {
-    width: 100px;
-    border-radius: 50%;
+.result_images img,
+.option_image img {
+    width: 250px;
+
 }
 
 .user_result img {
-    width: 100px;
-    border-radius: 50%;
+    transform: rotate(90deg);
+}
+
+.cpu_result img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result {
+    text-align: center;
+    font-size: 2rem;
+    color: #7d2ae8;
+    margin-top: 1.5rem;
+}
+
+.option_images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.container.start .user_result,
+.container.start .cpu_result {
+    animation: shake 0.7s ease infinite;
+}
+
+.container.start .user_result {
+    transform-origin: left;
+}
+
+.container.start .cpu_result {
+    transform-origin: right;
+}
+
+@keyframes shake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.container.start .option_images {
+    pointer-events: none;
+}
+
+.option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.option_image:hover,
+.option_image.active {
+    opacity: 1;
+}
+
+.option_image img,
+.option_image p {
+    pointer-events: none;
+}
+
+.option_image p {
+    color: #7d2ae8;
+    font-size: 1.235rem;
+    margin-top: 1rem;
 }
